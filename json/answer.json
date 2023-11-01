@@ -1,0 +1,40 @@
+{
+    "obj": [
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川秀忠"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川家光"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川家綱"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川綱吉"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川家宣"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川家継"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川吉宗"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川家重"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川家治"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川家斉"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川家慶"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川家定"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川家茂"},
+        {"genre": "History", "inittext": "徳川○○", "answer": "徳川慶喜"},
+
+        {"genre": "Literature", "inittext": "祇園精舎の鐘の声、\n諸行無常の響あり", "answer": "平家物語"},
+        {"genre": "Literature", "inittext": "今は昔、竹取の翁といふ者ありけり", "answer": "竹取物語"},
+        {"genre": "Literature", "inittext": "春はあけぼの", "answer": "枕草子"},
+        {"genre": "Literature", "inittext": "男もすなる日記といふものを、\n女もしてみむとてするなり", "answer": "土佐日記"},
+        {"genre": "Literature", "inittext": "ある日の暮方の事である。\n一人の下人が、羅生門の下で\n雨やみを待っていた", "answer": "羅生門"},
+        {"genre": "Literature", "inittext": "吾輩は猫である。名前はまだない", "answer": "吾輩は猫である"},
+        {"genre": "Literature", "inittext": "これは、わたしが小さいときに、\n村の茂兵というおじいさんから\nきいたお話です", "answer": "ごんぎつね"},
+        {"genre": "Literature", "inittext": "まったく、\n豆太ほどおくびょうなやつはいない", "answer": "モチモチの木"},
+        {"genre": "Literature", "inittext": "広い海のどこかに、\n小さな魚のきょうだいたちが、\n楽しくくらしていた", "answer": "スイミー"},
+        {"genre": "Literature", "inittext": "にちようびの あさ うまれた\nちっぽけな あおむしは、\nおなかが ぺっこぺこ", "answer": "はらぺこあおむし"},
+
+        {"genre": "Geography", "inittext": "苫小牧", "answer": "とまこまい"},
+        {"genre": "Geography", "inittext": "弘前", "answer": "ひろさき"},
+        {"genre": "Geography", "inittext": "真岡", "answer": "もおか"},
+        {"genre": "Geography", "inittext": "我孫子", "answer": "あびこ"},
+        {"genre": "Geography", "inittext": "蒲郡", "answer": "がまごおり"},
+        {"genre": "Geography", "inittext": "函南", "answer": "かんなみ"},
+        {"genre": "Geography", "inittext": "枚方", "answer": "ひらかた"},
+        {"genre": "Geography", "inittext": "斑鳩", "answer": "いかるが"},
+        {"genre": "Geography", "inittext": "諫早", "answer": "いさはや"},
+        {"genre": "Geography", "inittext": "廿日市", "answer": "はつかいち"}
+    ]
+}

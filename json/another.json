@@ -1,0 +1,28 @@
+{
+    "obj": [
+        {"answer": "徳川秀忠", "another": ["秀忠", "ひでただ"]},
+        {"answer": "徳川家光", "another": ["家光", "いえみつ"]},
+        {"answer": "徳川家綱", "another": ["家綱", "いえつな"]},
+        {"answer": "徳川綱吉", "another": ["綱吉", "つなよし"]},
+        {"answer": "徳川家宣", "another": ["家宣", "いえのぶ"]},
+        {"answer": "徳川家継", "another": ["家継", "いえつぐ"]},
+        {"answer": "徳川吉宗", "another": ["吉宗", "よしむね"]},
+        {"answer": "徳川家重", "another": ["家重", "いえしげ"]},
+        {"answer": "徳川家治", "another": ["家治", "いえはる"]},
+        {"answer": "徳川家斉", "another": ["家斉", "いえなり"]},
+        {"answer": "徳川家慶", "another": ["家慶", "いえよし"]},
+        {"answer": "徳川家定", "another": ["家定", "いえさだ"]},
+        {"answer": "徳川慶喜", "another": ["慶喜", "よしのぶ"]},
+
+        {"answer": "平家物語", "another": ["へいけものがたり"]},
+        {"answer": "竹取物語", "another": ["たけとりものがたり"]},
+        {"answer": "枕草子", "another": ["まくらのそうし"]},
+        {"answer": "土佐日記", "another": ["とさにっき"]},
+        {"answer": "羅生門", "another": ["らしょうもん"]},
+        {"answer": "吾輩は猫である", "another": ["わがはいはねこである"]},
+        {"answer": "ごんぎつね", "another": []},
+        {"answer": "モチモチの木", "another": ["もちもちのき"]},
+        {"answer": "スイミー", "another": ["すいみー"]},
+        {"answer": "はらぺこあおむし", "another": []}
+    ]
+}

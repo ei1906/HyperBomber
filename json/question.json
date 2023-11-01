@@ -1,0 +1,9 @@
+{
+    "obj": [
+        {"question": "家康を除いた徳川15代将軍、10人答えよ", "genre": "History"},
+        {"question": "次の冒頭で始まる物語、全て答えよ", "genre": "Literature"},
+        {"question": "次の難読地名、ひらがなで全て答えよ", "genre": "Geography"},
+        {"question": "次の漫画の作者、ペンネームで全て答えよ", "genre": "Comic"},
+        {"question": "該当の問題は存在しません", "genre": "Unknown"}
+    ]
+}
