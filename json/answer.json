@@ -35,6 +35,17 @@
         {"genre": "Geography", "inittext": "枚方", "answer": "ひらかた"},
         {"genre": "Geography", "inittext": "斑鳩", "answer": "いかるが"},
         {"genre": "Geography", "inittext": "諫早", "answer": "いさはや"},
-        {"genre": "Geography", "inittext": "廿日市", "answer": "はつかいち"}
+        {"genre": "Geography", "inittext": "廿日市", "answer": "はつかいち"},
+
+        {"genre": "Pokemon", "inittext": "第1位", "answer": "ゲッコウガ"},
+        {"genre": "Pokemon", "inittext": "第2位", "answer": "ルカリオ"},
+        {"genre": "Pokemon", "inittext": "第3位", "answer": "ミミッキュ"},
+        {"genre": "Pokemon", "inittext": "第4位", "answer": "リザードン"},
+        {"genre": "Pokemon", "inittext": "第5位", "answer": "ブラッキー"},
+        {"genre": "Pokemon", "inittext": "第6位", "answer": "ニンフィア"},
+        {"genre": "Pokemon", "inittext": "第7位", "answer": "ガブリアス"},
+        {"genre": "Pokemon", "inittext": "第8位", "answer": "レックウザ"},
+        {"genre": "Pokemon", "inittext": "第9位", "answer": "サーナイト"},
+        {"genre": "Pokemon", "inittext": "第10位", "answer": "ゲンガー"}
     ]
 }
