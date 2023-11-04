@@ -7,13 +7,27 @@
     </head>
     <body>
         
-        <p>ここはゲーム画面</p>
-        <button type="button" onclick="getQuizCategory()">開始</button>
-        <p id="QuizCategory">クイズカテゴリー</p>
-        <a href="./select.html"><button>セレクト画面へ</button></a>
+        <div class="SelectButton">
+            <img src="./image/select_button.png" onclick="selectLiter()">
+            <p>文学</p>
+            <img src="./image/select_button.png" onclick="selectGeo()">
+            <p>地理</p>
+            <img src="./image/select_button.png" onclick="selectHistory()">
+            <p>歴史</p>
+        </div>
+        <div class="SelectButton">
+            <img src="./image/select_button.png" onclick="selectComic()">
+            <p>マンガ</p>
+            <img src="./image/select_button.png">
+            <p>未定</p>
+            <img src="./image/select_button.png">
+            <p>未定</p>
+        </div>
+        <a href="./title.html"><button>タイトル画面へ</button></a>
 
-        <h1>外部ファイル(JavaScript)の読み込み</h1>
-        <button type="button" onclick="ChangeParaToDate()">クリックして下さい</button>
-        <p id="eid_date">外部ファイルでコンテンツの内容を変更します。</p>
+        <div class="AnswerBoard">
+            <img src="./image/quiz_board.png">
+            <p>ここに解答</p>
+        </div>
     </body>
 </html>

@@ -6,27 +6,42 @@
         // document.getElementById('QuizCategory').textContent = quiz_category;
     }
 
-    function setQuizCategory(str) {
-        quiz_category = str;
-    }
-
     function selectGeo() {
         quiz_category = "Geography";
+        ToGameScene();
     }
 
-    const selectHistory = () => {
+    function selectHistory() {
         quiz_category = "History";
+        ToGameScene();
     }
 
-    const selectLiter = () => {
+    function selectLiter() {
         quiz_category = "Literature";
+        ToGameScene();
     }
 
-    const selectComic = () => {
+    function selectComic() {
         quiz_category = "Comic";
+        ToGameScene();
     }
 
-    function ChangeParaToDate() {
-        document.getElementById('eid_date').innerHTML = Date();
+    function ToGameScene() {
+       // JavaScriptを使ってクラスを持つすべての画像をクリックしたときに非表示にする関数を作成
+       var images = document.querySelectorAll(".SelectButton");
+       images.forEach(function(image) {
+           image.addEventListener("click", function() {
+               images.forEach(function(img) {
+                   img.style.display = "none";
+               });
+           });
+       });
     }
+
+    function ToSelectScene() {
+        var but_select = document.getElementsByClassName("SelectButton");
+        var board_answer = document.getElementsByClassName("AnswerBoard");
+        but_select.display = "display";
+        board_answer.display = "none";
+     }
 }
