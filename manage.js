@@ -26,22 +26,31 @@
         ToGameScene();
     }
 
+    function selectPokemon() {
+        quiz_category = "Pokemon";
+        ToGameScene();
+    }
+
     function ToGameScene() {
-       // JavaScriptを使ってクラスを持つすべての画像をクリックしたときに非表示にする関数を作成
-       var images = document.querySelectorAll(".SelectButton");
-       images.forEach(function(image) {
-           image.addEventListener("click", function() {
-               images.forEach(function(img) {
-                   img.style.display = "none";
-               });
-           });
-       });
+        // 
+        var select_logo = document.getElementById("SelectLogo");
+        select_logo.style.display = "none";
+        // セレクトボタンを非表示に
+        var images = document.querySelectorAll(".SelectButton");
+        images.forEach(function (image) {
+            image.addEventListener("click", function () {
+                images.forEach(function (img) {
+                    img.style.display = "none";
+                });
+            });
+        });
     }
 
     function ToSelectScene() {
-        var but_select = document.getElementsByClassName("SelectButton");
-        var board_answer = document.getElementsByClassName("AnswerBoard");
-        but_select.display = "display";
-        board_answer.display = "none";
-     }
+        // セレクトボタンを表示
+        var selectButtons = document.querySelectorAll(".SelectButton");
+        for (var i = 0; i < selectButtons.length; i++) {
+            selectButtons[i].style.display = "block";
+        }
+    }
 }
