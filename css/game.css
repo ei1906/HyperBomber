@@ -49,3 +49,11 @@
     transform: translate(-50%, -50%);
     font-weight: bold;
 }
+
+#SelectLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: auto;
+}
