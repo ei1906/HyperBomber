@@ -1,9 +1,15 @@
 {
+    // ゲーム画面に移行するときにどのカテゴリーかを判断する
     var quiz_category = "Unknown";
 
-    function getQuizCategory() {
-        document.getElementById('QuizCategory').innerHTML = quiz_category;
-        // document.getElementById('QuizCategory').textContent = quiz_category;
+    // HTMLファイルが読み込まれた際に実行される関数
+    window.onload = function() {
+
+    }
+
+    // jsonファイルを読み込む
+    function load_json() {
+        
     }
 
     function selectGeo() {
