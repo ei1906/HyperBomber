@@ -32,10 +32,10 @@
     }
 
     function ToGameScene() {
-        // 
+        // 「問題一覧」を非表示
         var select_logo = document.getElementById("SelectLogo");
         select_logo.style.display = "none";
-        // セレクトボタンを非表示に
+        // セレクトボタンを非表示
         var images = document.querySelectorAll(".SelectButton");
         images.forEach(function (image) {
             image.addEventListener("click", function () {
@@ -44,6 +44,12 @@
                 });
             });
         });
+        // 解答ボードを表示
+        var answerBoards = document.getElementsByClassName("AnswerBoard");
+        for (var i = 0; i < answerBoards.length; i++) {
+            answerBoards[i].style.display = "flex";
+        }
+
     }
 
     function ToSelectScene() {
