@@ -23,6 +23,7 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .AnswerBoard {
@@ -56,4 +57,15 @@
     margin-right: auto;
     height: 100px;
     width: auto;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 10px 20px;
+}
+
+td {
+    padding: 30px;
 }
