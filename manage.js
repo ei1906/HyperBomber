@@ -8,7 +8,10 @@
 
     // HTMLファイルが読み込まれた際に実行される関数
     window.onload = function () {
-        load_json();
+        // load_json();
+        var form = document.getElementById("myForm");
+        // エンターキーを押したときにhandleKeyPress関数を呼び出す
+        form.addEventListener("keypress", handleKeyPress);
     }
 
     // jsonファイルを読み込む
@@ -18,10 +21,11 @@
             .then(response => response.json())
             .then(data => {
                 // 読み込んだJSONデータを変数に格納
-                json_question = JSON.parse(data);
+                console.log(data);
+                //json_question = JSON.parse(data);
             });
         // answer.jsonを読み込み
-        fetch("./json/answer.json")
+        /*fetch("./json/answer.json")
             .then(response => response.json())
             .then(data => {
                 // 読み込んだJSONデータを変数に格納
@@ -33,7 +37,7 @@
             .then(data => {
                 // 読み込んだJSONデータを変数に格納
                 json_another = JSON.parse(data);
-            });
+            });*/
     }
 
     function selectLiter() {
@@ -85,17 +89,25 @@
             });
         });
         // タイトルへ戻るボタンを非表示
-        var title_button = document.getElementById("title_button");
+        var title_button = document.getElementById("TitleButton");
         title_button.style.display = "none";
         // 問題ボードを表示
-        var questionboard = document.getElementById("QuestionBoard");
-        questionboard.style.display = "block";
+        var question_board = document.getElementById("QuestionBoard");
+        question_board.style.display = "block";
+        /*json_question.obj.forEach(function(elm) {
+            console.log(elm);
+            //if(elm["genre"] == quiz_category){
+            //    question_board.innerHTML = elm["question"];
+            //}
+        });*/
         // 解答ボードを表示
         var answerBoards = document.getElementsByClassName("AnswerBoard");
         for (var i = 0; i < answerBoards.length; i++) {
             answerBoards[i].style.display = "block";
         }
-
+        // 解答ボックスを表示
+        var answer_box = document.getElementById("AnswerForm");
+        answer_box.style.display = "block";
     }
 
     function ToSelectScene() {
@@ -108,5 +120,17 @@
 
     function setListByCategory() {
 
+    }
+
+    function getInputValue() {
+        var inputValue = document.getElementById("myInput").value;
+        alert("入力されたテキスト: " + inputValue);
+    }
+
+    function handleKeyPress(event) {
+        if (event.keyCode === 13) { // Enterキーのキーコードは13
+            event.preventDefault(); // フォームのデフォルト送信を防止
+            getInputValue(); // フォーム送信の代わりに関数を呼び出す
+        }
     }
 }

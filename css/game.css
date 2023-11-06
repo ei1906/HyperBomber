@@ -109,5 +109,10 @@ td {
 .BoardContainer {
     display: flex;
     justify-content: space-between;
-    margin-top: 1px;
+    margin-top: 5px;
+}
+
+/* 解答ボックス関連 */
+#AnswerForm {
+    display: none;
 }

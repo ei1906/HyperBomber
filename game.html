@@ -54,7 +54,7 @@
             </tr>
         </table>
     </div>
-    <a href="./title.html"><button id="title_button">タイトル画面へ</button></a>
+    <a href="./title.html"><button id="TitleButton">タイトル画面へ</button></a>
 
     <!-- ゲーム画面 -->
     <div id="QuestionBoard">
@@ -111,6 +111,10 @@
             <p id="B10">ここに解答</p>
         </div>
     </div>
+    <form id="AnswerForm">
+        <input type="text" id="myInput" placeholder="テキストを入力してください">
+        <button type="button" onclick="getInputValue()">取得</button>
+    </form>
 </body>
 
 </html>
