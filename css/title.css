@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+body {
+    background-color: 	#5997BC;
+}
+
 #TitleLogo {
     width: 450px;
     height: 100%;

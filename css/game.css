@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+/* 背景色 */
+body {
+    background-color: 	#5997BC;
+}
+
 /* セレクトロゴ（「問題一覧」）関連 */
 #SelectLogo {
     display: block;
