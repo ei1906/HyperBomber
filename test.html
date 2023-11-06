@@ -1,49 +1,18 @@
-<!--!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="./css/test.css" type="text/css">
-        <script src="manage.js"></script>
-    </head>
-    <body>
-        
-        <p>ここはゲーム画面</p>
-        <a href="./select.html"><button>セレクト画面へ</button></a>
-    </body>
-</html-->
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>画像クリックで消える</title>
+    <title>画像を左端と右端に表示</title>
     <style>
         .image-container {
-            position: relative;
-        }
-        .myImage {
-            width: 300px;
-            height: 200px;
-            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
         }
     </style>
 </head>
 <body>
     <div class="image-container">
-        <img class="SelectButton" src="./image/select_button.png" alt="クリックで消える画像">
-        <img class="SelectButton" src="./image/select_button.png" alt="クリックで消える画像">
+        <img src="./image/quiz_board.png" alt="左端の画像">
+        <img src="./image/quiz_board.png" alt="右端の画像">
     </div>
-    
-
-    <script>
-        // JavaScriptを使ってクラスを持つすべての画像をクリックしたときに非表示にする関数を作成
-        var images = document.querySelectorAll(".SelectButton");
-        images.forEach(function(image) {
-            image.addEventListener("click", function() {
-                images.forEach(function(img) {
-                    img.style.display = "none";
-                });
-            });
-        });
-    </script>
 </body>
 </html>

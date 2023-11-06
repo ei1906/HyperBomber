@@ -36,15 +36,47 @@
     white-space: nowrap;
 }
 
-table {
+#SelectTable table {
     margin-left: auto;
     margin-right: auto;
     border-collapse: separate;
     border-spacing: 10px 20px;
+    
 }
 
 td {
     padding: 30px;
+}
+
+/* 問題ボード関連 */
+#QuestionBoard {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    display: none;
+    text-align: center;
+}
+
+#QuestionBoard img {
+    height: 80px;
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
+#QuestionBoard p {
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 /* 解答ボード関連 */
@@ -61,7 +93,7 @@ td {
 
 .AnswerBoard p {
     position: absolute;
-    color: whitesmoke;
+    color: black;
     top: 50%;
     left: 50%;
     font-size: 30px;
@@ -71,6 +103,7 @@ td {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .BoardContainer {
