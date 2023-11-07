@@ -41,7 +41,7 @@
         var question_board = document.getElementById("Question");
         question_board.innerHTML = ques;
         for (var i = 1; i <= 10; i++) {
-            var board_id = "B" + i;
+            var board_id = "T" + i;
             var board = document.getElementById(board_id);
             if (board) {
                 board.innerHTML = ans_list[i - 1]["inittext"];
@@ -121,24 +121,7 @@
         console.log(inputValue);
         if(checkAnsList(inputValue) && checkAnswerBoard(inputValue)){
             // 該当のボードの画像と文字列を変更
-            var inittext;
-            ans_list.forEach(function(elm) {
-                if(elm["answer"] == inputValue){
-                    inittext = elm["inittext"];
-                }
-            });
-            var changed;
-            for (var i = 10; i >= 1; i--) {
-                var board_id = "B" + i;
-                var board = document.getElementById(board_id);
-                if (board) {
-                    if(board.innerHTML == inittext){
-                        changed = board;
-                        console.log(board_id);
-                    }
-                }
-            }
-            changed.innerHTML = inputValue;
+            changeBoard(inputValue);
         }
     }
 
@@ -164,7 +147,7 @@
         // 既に回答されたものでないか確認
         var ret = true;
         for (var i = 1; i <= 10; i++) {
-            var board_id = "B" + i;
+            var board_id = "T" + i;
             var board = document.getElementById(board_id);
             if (board) {
                 if(board.innerHTML == input){
@@ -187,6 +170,29 @@
             
         });
         return ret;
+    }
+
+    function changeBoard(input) {
+        var inittext;
+        ans_list.forEach(function (elm) {
+            if (elm["answer"] == input) {
+                inittext = elm["inittext"];
+            }
+        });
+        var changed_text, changed_board;
+        for (var i = 10; i >= 1; i--) {
+            var text_id = "T" + i;
+            var text = document.getElementById(text_id);
+            if (text) {
+                if (text.innerHTML == inittext) {
+                    changed_board = document.getElementById("B" + i);
+                    changed_text = text;
+                }
+            }
+        }
+        changed_board.src = "./image/correct_board.png";
+        changed_text.innerHTML = input;
+        changed_text.style.color = "white";
     }
 
     // jsonをセット（嫌だけど直書き）
