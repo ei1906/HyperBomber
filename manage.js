@@ -78,6 +78,7 @@
     
     function getInputValue() {
         var inputValue = document.getElementById("AnswerBox").value;
+        document.getElementById("AnswerBox").value = "";
         inputValue = changeFromAnotherAnswer(inputValue); // 別解は正答に変更
         console.log(inputValue);
         if(checkAnsList(inputValue) && checkAnswerBoard(inputValue)){
