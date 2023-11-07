@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/* 背景色 */
+body {
+    background-color: 	#5997BC;
+}
+
+/* セレクトロゴ（「問題一覧」）関連 */
+#SelectLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: auto;
+}
+
+/* セレクトボタン関連 */
+.SelectButton {
+    width: 180px;
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
+.SelectButton img {
+    width: 100%;
+}
+
+.SelectButton p {
+    position: absolute;
+    color: whitesmoke;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#SelectTable table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 10px 20px;
+    
+}
+
+td {
+    padding: 30px;
+}
