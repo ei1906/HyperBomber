@@ -45,6 +45,7 @@
             var board = document.getElementById(board_id);
             if (board) {
                 board.innerHTML = ans_list[i - 1]["inittext"];
+                board.style.fontSize = DefineFontSizeByStrlen(ans_list[i - 1]["inittext"]);
             }
         }
         
@@ -74,46 +75,6 @@
             });
         });
     }
-
-    /*function ToGameScene() {
-        // 「問題一覧」を非表示
-        var select_logo = document.getElementById("SelectLogo");
-        select_logo.style.display = "none";
-        // セレクトボタンを非表示
-        var table = document.getElementById("SelectTable");
-        table.style.display = "none";
-        var images = document.querySelectorAll(".SelectButton");
-        images.forEach(function (image) {
-            image.addEventListener("click", function () {
-                images.forEach(function (img) {
-                    img.style.display = "none";
-                });
-            });
-        });
-        // タイトルへ戻るボタンを非表示
-        var title_button = document.getElementById("TitleButton");
-        title_button.style.display = "none";
-        // 問題ボードを表示
-        var question_board = document.getElementById("QuestionBoard");
-        question_board.style.display = "block";
-        // 解答ボードを表示
-        var answerBoards = document.getElementsByClassName("AnswerBoard");
-        for (var i = 0; i < answerBoards.length; i++) {
-            answerBoards[i].style.display = "block";
-        }
-        // 解答ボックスを表示
-        var answer_box = document.getElementById("AnswerForm");
-        answer_box.style.display = "block";
-    }*/
-
-    /*function ToSelectScene() {
-        // セレクトボタンを表示
-        var selectButtons = document.querySelectorAll(".SelectButton");
-        for (var i = 0; i < selectButtons.length; i++) {
-            selectButtons[i].style.display = "block";
-        }
-    }*/
-
     
     function getInputValue() {
         var inputValue = document.getElementById("AnswerBox").value;
@@ -192,9 +153,23 @@
         }
         changed_board.src = "./image/correct_board.png";
         changed_text.innerHTML = input;
+        changed_text.style.fontSize = DefineFontSizeByStrlen(input);
         changed_text.style.color = "white";
     }
 
+    function DefineFontSizeByStrlen(str) {
+        var ret = "5px";
+        if(str.length <= 5) {
+            ret = "24px";
+        } else if(str.length <= 9) {
+            ret = "20px";
+        } else if(str.length <= 14) {
+            ret = "16px";
+        } else {
+            ret = "12px";
+        }
+        return ret;
+    }
     // jsonをセット（嫌だけど直書き）
     function set_json() {
         json_question = {
@@ -264,7 +239,7 @@
                 {"genre": "Comic", "inittext": "チェンソーマン", "answer": "藤本タツキ"},
                 {"genre": "Comic", "inittext": "鋼の錬金術師", "answer": "荒川弘"},
                 {"genre": "Comic", "inittext": "名探偵コナン", "answer": "青山剛昌"},
-                {"genre": "Comic", "inittext": "やなせたかし", "answer": "アンパンマン"},
+                {"genre": "Comic", "inittext": "アンパンマン", "answer": "やなせたかし"},
                 {"genre": "Comic", "inittext": "ちびまる子ちゃん", "answer": "さくらももこ"},
                 {"genre": "Comic", "inittext": "サザエさん", "answer": "長谷川町子"}
             ]
