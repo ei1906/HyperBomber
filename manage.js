@@ -1,54 +1,71 @@
 {
     // ゲーム画面に移行するときにどのカテゴリーかを判断する
-    var quiz_category = "Unknown";
+    var quiz_genre = "Unknown";
     // jsonが格納されている変数
     var json_question, json_answer, json_another;
     // クイズカテゴリーに応じた回答リストと別解リストを保持する変数
-    var ans_list, another_list;
+    var ques, ans_list, another_list;
 
     // HTMLファイルが読み込まれた際に実行される関数
     window.onload = function () {
+        // jsonをセット
         set_json();
-        var form = document.getElementById("myForm");
-        // エンターキーを押したときにhandleKeyPress関数を呼び出す
+        // URLからジャンルをGET方式で取得
+        getQuizGenre();
+        // 入力フォームでエンターキーが使えるように設定
+        var form = document.getElementById("AnswerForm");
         form.addEventListener("keypress", handleKeyPress);
+        // クイズジャンルにしたがって問題文と選択肢をセット
+        setElementText();
     }
 
-    
-
-    function selectLiter() {
-        quiz_category = "Literature";
-        ToGameScene();
+    function getQuizGenre() {
+        var url = new URL(window.location.href);
+        var params = url.searchParams;
+        var c = params.get('genre');
+        if(c == "Lit") {
+            quiz_genre = "Literature";
+        } else if(c == "Geo"){
+            quiz_genre = "Geography";
+        } else if(c == "His"){
+            quiz_genre = "History";
+        } else if(c == "Com"){
+            quiz_genre = "Comic";
+        } else if(c == "Pok"){
+            quiz_genre = "Pokemon";
+        }
     }
 
-    function selectGeo() {
-        quiz_category = "Geography";
-        ToGameScene();
-        setListByCategory();
+    function setElementText() {
+        setListByGenre();
+        var question_board = document.getElementById("Question");
+        question_board.innerHTML = ques;
         for (var i = 1; i <= 10; i++) {
             var board_id = "B" + i;
             var board = document.getElementById(board_id);
             if (board) {
-                board.innerHTML = "こんにちは";
+                board.innerHTML = ans_list[i - 1]["inittext"];
             }
         }
+        
     }
 
-    function selectHistory() {
-        quiz_category = "History";
-        ToGameScene();
-    }
+    function setListByGenre(){
+        // Genreの問題文を取得・格納
+        json_question["obj"].forEach(function(elm) {
+            if(elm["genre"] == quiz_genre){
+                ques = elm["question"];
+            }
+        });
+        // Genreの解答一覧を取得・格納
+        ans_list = [];
+        json_answer["obj"].forEach(function(elm) {
+            if(elm["genre"] == quiz_genre){
+                ans_list.push(elm);
+            }
+        });
 
-    function selectComic() {
-        quiz_category = "Comic";
-        ToGameScene();
     }
-
-    function selectPokemon() {
-        quiz_category = "Pokemon";
-        ToGameScene();
-    }
-
     function ToGameScene() {
         // 「問題一覧」を非表示
         var select_logo = document.getElementById("SelectLogo");
@@ -94,10 +111,7 @@
         }
     }
 
-    function setListByCategory() {
-
-    }
-
+    
     function getInputValue() {
         var inputValue = document.getElementById("myInput").value;
         alert("入力されたテキスト: " + inputValue);
@@ -139,16 +153,16 @@
                 {"genre": "History", "inittext": "徳川○○", "answer": "徳川家茂"},
                 {"genre": "History", "inittext": "徳川○○", "answer": "徳川慶喜"},
         
-                {"genre": "Literature", "inittext": "祇園精舎の鐘の声、\n諸行無常の響あり", "answer": "平家物語"},
+                {"genre": "Literature", "inittext": "祇園精舎の鐘の声、<br>諸行無常の響あり", "answer": "平家物語"},
                 {"genre": "Literature", "inittext": "今は昔、竹取の翁といふ者ありけり", "answer": "竹取物語"},
                 {"genre": "Literature", "inittext": "春はあけぼの", "answer": "枕草子"},
-                {"genre": "Literature", "inittext": "男もすなる日記といふものを、\n女もしてみむとてするなり", "answer": "土佐日記"},
-                {"genre": "Literature", "inittext": "ある日の暮方の事である。\n一人の下人が、羅生門の下で\n雨やみを待っていた", "answer": "羅生門"},
+                {"genre": "Literature", "inittext": "男もすなる日記といふものを、<br>女もしてみむとてするなり", "answer": "土佐日記"},
+                {"genre": "Literature", "inittext": "ある日の暮方の事である。<br>一人の下人が、羅生門の下で<br>雨やみを待っていた", "answer": "羅生門"},
                 {"genre": "Literature", "inittext": "吾輩は猫である。名前はまだない", "answer": "吾輩は猫である"},
-                {"genre": "Literature", "inittext": "これは、わたしが小さいときに、\n村の茂兵というおじいさんから\nきいたお話です", "answer": "ごんぎつね"},
-                {"genre": "Literature", "inittext": "まったく、\n豆太ほどおくびょうなやつはいない", "answer": "モチモチの木"},
-                {"genre": "Literature", "inittext": "広い海のどこかに、\n小さな魚のきょうだいたちが、\n楽しくくらしていた", "answer": "スイミー"},
-                {"genre": "Literature", "inittext": "にちようびの あさ うまれた\nちっぽけな あおむしは、\nおなかが ぺっこぺこ", "answer": "はらぺこあおむし"},
+                {"genre": "Literature", "inittext": "これは、わたしが小さいときに、<br>村の茂兵というおじいさんから<br>きいたお話です", "answer": "ごんぎつね"},
+                {"genre": "Literature", "inittext": "まったく、<br>豆太ほどおくびょうなやつはいない", "answer": "モチモチの木"},
+                {"genre": "Literature", "inittext": "広い海のどこかに、<br>小さな魚のきょうだいたちが、<br>楽しくくらしていた", "answer": "スイミー"},
+                {"genre": "Literature", "inittext": "にちようびの あさ うまれた<br>ちっぽけな あおむしは、<br>おなかが ぺっこぺこ", "answer": "はらぺこあおむし"},
         
                 {"genre": "Geography", "inittext": "苫小牧", "answer": "とまこまい"},
                 {"genre": "Geography", "inittext": "弘前", "answer": "ひろさき"},

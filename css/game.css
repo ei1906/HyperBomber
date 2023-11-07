@@ -37,7 +37,7 @@ body {
 
 /* 解答ボード関連 */
 .AnswerBoard {
-    width: 180px;
+    width: 200px;
     height: 100%;
     position: relative;
 }
@@ -51,7 +51,7 @@ body {
     color: black;
     top: 50%;
     left: 50%;
-    font-size: 30px;
+    font-size: 13px;
     padding: 0;
     margin: 0;
     -ms-transform: translate(-50%, -50%);
