@@ -46,6 +46,17 @@
         {"genre": "Pokemon", "inittext": "第7位", "answer": "ガブリアス"},
         {"genre": "Pokemon", "inittext": "第8位", "answer": "レックウザ"},
         {"genre": "Pokemon", "inittext": "第9位", "answer": "サーナイト"},
-        {"genre": "Pokemon", "inittext": "第10位", "answer": "ゲンガー"}
+        {"genre": "Pokemon", "inittext": "第10位", "answer": "ゲンガー"},
+
+        {"genre": "Comic", "inittext": "ドラゴンボール", "answer": "鳥山明"},
+        {"genre": "Comic", "inittext": "ワンピース", "answer": "尾田栄一郎"},
+        {"genre": "Comic", "inittext": "銀魂", "answer": "空知英秋"},
+        {"genre": "Comic", "inittext": "鬼滅の刃", "answer": "吾峠呼世晴"},
+        {"genre": "Comic", "inittext": "チェンソーマン", "answer": "藤本タツキ"},
+        {"genre": "Comic", "inittext": "鋼の錬金術師", "answer": "荒川弘"},
+        {"genre": "Comic", "inittext": "名探偵コナン", "answer": "青山剛昌"},
+        {"genre": "Comic", "inittext": "やなせたかし", "answer": "アンパンマン"},
+        {"genre": "Comic", "inittext": "ちびまる子ちゃん", "answer": "さくらももこ"},
+        {"genre": "Comic", "inittext": "サザエさん", "answer": "長谷川町子"}
     ]
 }

@@ -25,6 +25,17 @@
         {"answer": "スイミー", "another": ["すいみー"]},
         {"answer": "はらぺこあおむし", "another": []},
 
+        {"answer": "とまこまい", "another": []},
+        {"answer": "ひろさき", "another": []},
+        {"answer": "もおか", "another": []},
+        {"answer": "あびこ", "another": []},
+        {"answer": "がまごおり", "another": []},
+        {"answer": "かんなみ", "another": []},
+        {"answer": "ひらかた", "another": []},
+        {"answer": "いかるが", "another": []},
+        {"answer": "いさはや", "another": []},
+        {"answer": "はつかいち", "another": []},
+
         {"answer": "ゲッコウガ", "another": ["げっこうが"]},
         {"answer": "ルカリオ", "another": ["るかりお"]},
         {"answer": "ミミッキュ", "another": ["みみっきゅ"]},
@@ -34,6 +45,17 @@
         {"answer": "ガブリアス", "another": ["がぶりあす"]},
         {"answer": "レックウザ", "another": ["れっくうざ"]},
         {"answer": "サーナイト", "another": ["さーないと"]},
-        {"answer": "ゲンガー", "another": ["げんがー"]}
+        {"answer": "ゲンガー", "another": ["げんがー"]},
+
+        {"answer": "鳥山明", "another": ["とりやまあきら"]},
+        {"answer": "尾田栄一郎", "another": ["おだえいいちろう"]},
+        {"answer": "空知英秋", "another": ["そらちひであき"]},
+        {"answer": "吾峠呼世晴", "another": ["ごとうげこよはる"]},
+        {"answer": "藤本タツキ", "another": ["ふじもとたつき"]},
+        {"answer": "荒川弘", "another": ["あらかわひろむ"]},
+        {"answer": "青山剛昌", "another": ["あおやまごうしょう"]},
+        {"answer": "やなせたかし", "another": []},
+        {"answer": "さくらももこ", "another": []},
+        {"answer": "長谷川町子", "another": ["はせがわまちこ"]}
     ]
 }
