@@ -13,7 +13,7 @@
         // URLからジャンルをGET方式で取得
         getQuizGenre();
         // 入力フォームでエンターキーが使えるように設定
-        var form = document.getElementById("AnswerForm");
+        var form = document.getElementById("AnswerBox");
         form.addEventListener("keypress", handleKeyPress);
         // クイズジャンルにしたがって問題文と選択肢をセット
         setElementText();
@@ -64,9 +64,18 @@
                 ans_list.push(elm);
             }
         });
-
+        // ans_listに格納されている解答の別解を取得
+        another_list = [];
+        ans_list.forEach(function(elm){
+            json_another["obj"].forEach(function(elm2) {
+                if(elm["answer"] == elm2["answer"]){
+                    another_list.push(elm2);
+                }
+            });
+        });
     }
-    function ToGameScene() {
+
+    /*function ToGameScene() {
         // 「問題一覧」を非表示
         var select_logo = document.getElementById("SelectLogo");
         select_logo.style.display = "none";
@@ -87,12 +96,6 @@
         // 問題ボードを表示
         var question_board = document.getElementById("QuestionBoard");
         question_board.style.display = "block";
-        /*json_question.obj.forEach(function(elm) {
-            console.log(elm);
-            //if(elm["genre"] == quiz_category){
-            //    question_board.innerHTML = elm["question"];
-            //}
-        });*/
         // 解答ボードを表示
         var answerBoards = document.getElementsByClassName("AnswerBoard");
         for (var i = 0; i < answerBoards.length; i++) {
@@ -101,20 +104,42 @@
         // 解答ボックスを表示
         var answer_box = document.getElementById("AnswerForm");
         answer_box.style.display = "block";
-    }
+    }*/
 
-    function ToSelectScene() {
+    /*function ToSelectScene() {
         // セレクトボタンを表示
         var selectButtons = document.querySelectorAll(".SelectButton");
         for (var i = 0; i < selectButtons.length; i++) {
             selectButtons[i].style.display = "block";
         }
-    }
+    }*/
 
     
     function getInputValue() {
-        var inputValue = document.getElementById("myInput").value;
-        alert("入力されたテキスト: " + inputValue);
+        var inputValue = document.getElementById("AnswerBox").value;
+        inputValue = changeFromAnotherAnswer(inputValue); // 別解は正答に変更
+        console.log(inputValue);
+        if(checkAnsList(inputValue) && checkAnswerBoard(inputValue)){
+            // 該当のボードの画像と文字列を変更
+            var inittext;
+            ans_list.forEach(function(elm) {
+                if(elm["answer"] == inputValue){
+                    inittext = elm["inittext"];
+                }
+            });
+            var changed;
+            for (var i = 10; i >= 1; i--) {
+                var board_id = "B" + i;
+                var board = document.getElementById(board_id);
+                if (board) {
+                    if(board.innerHTML == inittext){
+                        changed = board;
+                        console.log(board_id);
+                    }
+                }
+            }
+            changed.innerHTML = inputValue;
+        }
     }
 
     function handleKeyPress(event) {
@@ -122,6 +147,46 @@
             event.preventDefault(); // フォームのデフォルト送信を防止
             getInputValue(); // フォーム送信の代わりに関数を呼び出す
         }
+    }
+
+    function checkAnsList(input) {
+        // 回答がans_listに含まれているか確認
+        var ret = false;
+        ans_list.forEach(function(elm) {
+            if(elm["answer"] == input){
+                ret = true;
+            }
+        });
+        return ret;
+    }
+
+    function checkAnswerBoard(input) {
+        // 既に回答されたものでないか確認
+        var ret = true;
+        for (var i = 1; i <= 10; i++) {
+            var board_id = "B" + i;
+            var board = document.getElementById(board_id);
+            if (board) {
+                if(board.innerHTML == input){
+                    ret = false;
+                }
+            }
+        }
+        return ret;
+    }
+
+    function changeFromAnotherAnswer(input) {
+        // 別解だった場合、正答に変更
+        var ret = input;
+        another_list.forEach(function(elm) {
+            elm["another"].forEach(function(elm2) {
+                if(elm2 == input){
+                    ret = elm["answer"];
+                }
+            });
+            
+        });
+        return ret;
     }
 
     // jsonをセット（嫌だけど直書き）
