@@ -4,7 +4,7 @@
         {"question": "次の冒頭で始まる物語、全て答えよ", "genre": "Literature"},
         {"question": "次の難読地名、ひらがなで全て答えよ", "genre": "Geography"},
         {"question": "次のマンガ・アニメの作者、ペンネームで全て答えよ", "genre": "Comic"},
-        {"question": "2020年に行われたポケモン・オブ・ザ・イヤーでトップ10にランクインしたポケモン、全て答えよ", "genre": "Pokemon"},
+        {"question": "2020年のポケモン・オブ・ザ・イヤー（人気投票）でトップ10にランクインしたポケモン、全て答えよ", "genre": "Pokemon"},
         {"question": "該当の問題は存在しません", "genre": "Unknown"}
     ]
 }
