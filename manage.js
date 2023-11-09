@@ -84,10 +84,14 @@
         audioPlayer.src = audioFile;        
 
         audioPlayer.addEventListener("ended", function () {
-            // 再生が終了したときに新しい音声を再生
+            // 読み上げが終了したときにBGMを再生
             audioPlayer.src = "./audio/gameBGM.mp3";
             audioPlayer.loop = true; // ループ再生を有効にする
             audioPlayer.play();
+            // カウントダウン開始
+            setTimeout(function() {
+                window.location.href = './select.html';
+            }, 180000); // 3分後にセレクト画面へ移行
         });
     }
     
