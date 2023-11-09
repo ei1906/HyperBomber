@@ -17,6 +17,8 @@
         form.addEventListener("keypress", handleKeyPress);
         // クイズジャンルにしたがって問題文と選択肢をセット
         setElementText();
+        // 問題文を読み、BGMとカウントダウンを開始する
+        setAudio();
     }
 
     function getQuizGenre() {
@@ -73,6 +75,19 @@
                     another_list.push(elm2);
                 }
             });
+        });
+    }
+
+    function setAudio() {
+        var audioPlayer = document.getElementById("audio");
+        var audioFile = "./audio/"+quiz_genre+".wav";
+        audioPlayer.src = audioFile;        
+
+        audioPlayer.addEventListener("ended", function () {
+            // 再生が終了したときに新しい音声を再生
+            audioPlayer.src = "./audio/gameBGM.mp3";
+            audioPlayer.loop = true; // ループ再生を有効にする
+            audioPlayer.play();
         });
     }
     
@@ -171,6 +186,7 @@
         }
         return ret;
     }
+
     // jsonをセット（嫌だけど直書き）
     function set_json() {
         json_question = {

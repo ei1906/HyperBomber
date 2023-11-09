@@ -2,7 +2,8 @@
 
 /* 背景色 */
 body {
-    background-color: 	#5997BC;
+    background-image: url(../image/labo.jpg);
+    background-size: 1200px 800px;
 }
 
 /* 問題ボード関連 */
@@ -82,4 +83,12 @@ body {
     position: absolute;
     top: 27px;
     right: 10px;
+}
+
+/* オーディオ関連 */
+#audio {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
