@@ -5,6 +5,8 @@
     var json_question, json_answer, json_another;
     // クイズカテゴリーに応じた回答リストと別解リストを保持する変数
     var ques, ans_list, another_list;
+    // 正答数
+    var answered = 0;
 
     // HTMLファイルが読み込まれた際に実行される関数
     window.onload = function () {
@@ -90,8 +92,8 @@
                 audioPlayer.src = "./audio/bomb.mp3";
                 audioPlayer.play();
                 setTimeout(function() {
-                    window.location.href = './select.html';
-                }, 4000); // 4秒後にセレクト画面へ移行
+                    window.location.href = './result.html?res=fail';
+                }, 3000); // 4秒後にセレクト画面へ移行
             });
             audioPlayer.play();
         });
@@ -105,6 +107,10 @@
         if(checkAnsList(inputValue) && checkAnswerBoard(inputValue)){
             // 該当のボードの画像と文字列を変更
             changeBoard(inputValue);
+            answered ++;
+            if(answered >= 10){
+                window.location.href = './result.html?res=clear';
+            }
         }
     }
 
