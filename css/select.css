@@ -2,7 +2,8 @@
 
 /* 背景色 */
 body {
-    background-color: 	#5997BC;
+    background-image: url(../image/labo_select.png);
+    background-size: 1200px 800px;
 }
 
 /* セレクトロゴ（「問題一覧」）関連 */
@@ -46,8 +47,8 @@ body {
     margin-right: auto;
     border-collapse: separate;
     border-spacing: 10px 20px;
-    margin-top: 150px;
-    
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 td {

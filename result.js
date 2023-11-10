@@ -28,6 +28,6 @@
         var back = document.getElementById("body");
         back.style.backgroundImage = "url(./image/labo_bombered.jpg)";
         var logo = document.getElementById("ResultLogo");
-        logo.src = "./image/clear_fail.png";
+        logo.src = "./image/fail_logo.png";
     }
 }
