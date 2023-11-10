@@ -3,8 +3,11 @@
         {"question": "家康を除いた徳川15代将軍、10人答えよ", "genre": "History"},
         {"question": "次の冒頭で始まる物語、全て答えよ", "genre": "Literature"},
         {"question": "次の難読地名、ひらがなで全て答えよ", "genre": "Geography"},
+        {"question": "次の英文、全て日本のことわざに言い換えよ", "genre": "English"},
+        {"question": "静岡大学の学部・研究所、全て答えよ", "genre": "Univ"},
         {"question": "次のマンガ・アニメの作者、ペンネームで全て答えよ", "genre": "Comic"},
         {"question": "2020年のポケモン・オブ・ザ・イヤー（人気投票）でトップ10にランクインしたポケモン、全て答えよ", "genre": "Pokemon"},
+        {"question": "2023年上半期の総合ソング・チャートでトップ20にランクインした曲、10曲答えよ", "genre": "Music"},
         {"question": "該当の問題は存在しません", "genre": "Unknown"}
     ]
 }

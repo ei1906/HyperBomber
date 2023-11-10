@@ -33,6 +33,12 @@
             quiz_genre = "Geography";
         } else if(c == "His"){
             quiz_genre = "History";
+        } else if(c == "Eng"){
+            quiz_genre = "English";
+        } else if(c == "Uni"){
+            quiz_genre = "Univ";
+        } else if(c == "Mus"){
+            quiz_genre = "Music";
         } else if(c == "Com"){
             quiz_genre = "Comic";
         } else if(c == "Pok"){
@@ -206,8 +212,11 @@
                 {"question": "家康を除いた徳川15代将軍、10人答えよ", "genre": "History"},
                 {"question": "次の冒頭で始まる物語、全て答えよ", "genre": "Literature"},
                 {"question": "次の難読地名、ひらがなで全て答えよ", "genre": "Geography"},
+                {"question": "次の英文、全て日本のことわざに言い換えよ", "genre": "English"},
+                {"question": "静岡大学の学部・研究所、全て答えよ", "genre": "Univ"},
                 {"question": "次のマンガ・アニメの作者、ペンネームで全て答えよ", "genre": "Comic"},
                 {"question": "2020年のポケモン・オブ・ザ・イヤー（人気投票）で<br>トップ10にランクインしたポケモン、全て答えよ", "genre": "Pokemon"},
+                {"question": "2023年上半期の総合ソング・チャートで<br>トップ20にランクインした曲、10曲答えよ", "genre": "Music"},
                 {"question": "該当の問題は存在しません", "genre": "Unknown"}
             ]
         };
@@ -250,6 +259,28 @@
                 {"genre": "Geography", "inittext": "諫早", "answer": "いさはや"},
                 {"genre": "Geography", "inittext": "廿日市", "answer": "はつかいち"},
         
+                {"genre": "English", "inittext": "Seeing is believing", "answer": "百聞は一見に如かず"},
+                {"genre": "English", "inittext": "Kill two birds with one stone", "answer": "一石二鳥"},
+                {"genre": "English", "inittext": "Tomorrow is another day", "answer": "明日は明日の風が吹く"},
+                {"genre": "English", "inittext": "Failure teaches success", "answer": "失敗は成功のもと"},
+                {"genre": "English", "inittext": "So many men, so many minds", "answer": "十人十色"},
+                {"genre": "English", "inittext": "After a storm comes a calm", "answer": "雨降って地固まる"},
+                {"genre": "English", "inittext": "When in Rome, <br>do as the Romans do", "answer": "郷に入っては郷に従え"},
+                {"genre": "English", "inittext": "Out of the mouth comes evil", "answer": "口は災いの元"},
+                {"genre": "English", "inittext": "Practoce makes perfect", "answer": "習うより慣れろ"},
+                {"genre": "English", "inittext": "Example is <br>better than percept", "answer": "論より証拠"},
+        
+                {"genre": "Univ", "inittext": "学部", "answer": "情報学部"},
+                {"genre": "Univ", "inittext": "学部", "answer": "工学部"},
+                {"genre": "Univ", "inittext": "学部", "answer": "理学部"},
+                {"genre": "Univ", "inittext": "学部", "answer": "教育学部"},
+                {"genre": "Univ", "inittext": "学部", "answer": "農学部"},
+                {"genre": "Univ", "inittext": "学部", "answer": "人文社会学部"},
+                {"genre": "Univ", "inittext": "学部", "answer": "グローバル共創科学部"},
+                {"genre": "Univ", "inittext": "学環", "answer": "地域創造学環"},
+                {"genre": "Univ", "inittext": "研究所", "answer": "電子工学研究所"},
+                {"genre": "Univ", "inittext": "研究所", "answer": "グリーン科学技術研究所"},
+        
                 {"genre": "Pokemon", "inittext": "第1位", "answer": "ゲッコウガ"},
                 {"genre": "Pokemon", "inittext": "第2位", "answer": "ルカリオ"},
                 {"genre": "Pokemon", "inittext": "第3位", "answer": "ミミッキュ"},
@@ -268,9 +299,30 @@
                 {"genre": "Comic", "inittext": "チェンソーマン", "answer": "藤本タツキ"},
                 {"genre": "Comic", "inittext": "鋼の錬金術師", "answer": "荒川弘"},
                 {"genre": "Comic", "inittext": "名探偵コナン", "answer": "青山剛昌"},
-                {"genre": "Comic", "inittext": "アンパンマン", "answer": "やなせたかし"},
+                {"genre": "Comic", "inittext": "やなせたかし", "answer": "アンパンマン"},
                 {"genre": "Comic", "inittext": "ちびまる子ちゃん", "answer": "さくらももこ"},
-                {"genre": "Comic", "inittext": "サザエさん", "answer": "長谷川町子"}
+                {"genre": "Comic", "inittext": "サザエさん", "answer": "長谷川町子"},
+        
+                {"genre": "Music", "inittext": "", "answer": "Subtitle"},
+                {"genre": "Music", "inittext": "", "answer": "KICK BACK"},
+                {"genre": "Music", "inittext": "", "answer": "アイドル"},
+                {"genre": "Music", "inittext": "", "answer": "怪獣の花唄"},
+                {"genre": "Music", "inittext": "", "answer": "第ゼロ勘"},
+                {"genre": "Music", "inittext": "", "answer": "新時代"},
+                {"genre": "Music", "inittext": "", "answer": "W/X/Y"},
+                {"genre": "Music", "inittext": "", "answer": "Overdose"},
+                {"genre": "Music", "inittext": "", "answer": "ミックスナッツ"},
+                {"genre": "Music", "inittext": "", "answer": "アイラブユー"},
+                {"genre": "Music", "inittext": "", "answer": "ダンスホール"},
+                {"genre": "Music", "inittext": "", "answer": "シンデレラボーイ"},
+                {"genre": "Music", "inittext": "", "answer": "Habit"},
+                {"genre": "Music", "inittext": "", "answer": "水平線"},
+                {"genre": "Music", "inittext": "", "answer": "祝福"},
+                {"genre": "Music", "inittext": "", "answer": "ドライフラワー"},
+                {"genre": "Music", "inittext": "", "answer": "Ditto"},
+                {"genre": "Music", "inittext": "", "answer": "私は最強"},
+                {"genre": "Music", "inittext": "", "answer": "Soranji"},
+                {"genre": "Music", "inittext": "", "answer": "ペテルギウス"}
             ]
         };
         json_another = {
@@ -331,7 +383,50 @@
                 {"answer": "青山剛昌", "another": ["あおやまごうしょう"]},
                 {"answer": "やなせたかし", "another": []},
                 {"answer": "さくらももこ", "another": []},
-                {"answer": "長谷川町子", "another": ["はせがわまちこ"]}
+                {"answer": "長谷川町子", "another": ["はせがわまちこ"]},
+        
+                {"answer": "百聞は一見に如かず", "another": ["ひゃくぶんはいっけんにしかず", "百聞は一見にしかず"]},
+                {"answer": "一石二鳥", "another": ["いっせきにちょう"]},
+                {"answer": "明日は明日の風が吹く", "another": ["あしたはあしたのかぜがふく", "あすはあすのかぜがふく", "明日は明日の風がふく"]},
+                {"answer": "失敗は成功のもと", "another": ["しっぱいはせいこうのもと", "失敗は成功の基"]},
+                {"answer": "十人十色", "another": ["じゅうにんといろ"]},
+                {"answer": "雨降って地固まる", "another": ["あめふってじかたまる", "あめふってぢかたまる"]},
+                {"answer": "郷に入っては郷に従え", "another": ["ごうにいってはごうにしたがえ"]},
+                {"answer": "口は災いの元", "another": ["くちはわざわいのもと"]},
+                {"answer": "習うより慣れろ", "another": ["ならうよりなれろ", "習うより慣れよ", "ならうよりなれよ"]},
+                {"answer": "論より証拠", "another": ["ろんよりしょうこ"]},
+        
+                {"answer": "情報学部", "another": ["じょうほうがくぶ"]},
+                {"answer": "工学部", "another": ["こうがくぶ"]},
+                {"answer": "理学部", "another": ["りがくぶ"]},
+                {"answer": "教育学部", "another": ["きょういくがくぶ"]},
+                {"answer": "農学部", "another": ["のうがくぶ"]},
+                {"answer": "人文社会学部", "another": ["じんぶんしゃかいがくぶ"]},
+                {"answer": "グローバル共創科学部", "another": ["ぐろーばるきょうそうかがくぶ"]},
+                {"answer": "地域創造学環", "another": ["ちいきそうぞうがっかん"]},
+                {"answer": "電子工学研究所", "another": ["でんしこうがくけんきゅうじょ"]},
+                {"answer": "グリーン科学技術研究所", "another": ["ぐりーんかがくぎじゅつけんきゅうじょ"]},
+        
+                {"answer": "Subtitle", "another": ["サブタイトル", "subtitle", "さぶたいとる"]},
+                {"answer": "KICK BACK", "another": ["キックバック", "きっくばっく", "kick back", "KICKBACK"]},
+                {"answer": "アイドル", "another": ["あいどる"]},
+                {"answer": "怪獣の花唄", "another": ["かいじゅうのはなうた"]},
+                {"answer": "第ゼロ勘", "another": ["だいぜろかん"]},
+                {"answer": "新時代", "another": ["しんじだい"]},
+                {"answer": "W/X/Y", "another": ["WXY", "ダブリューエックスワイ", "だぶりゅーえっくすわい"]},
+                {"answer": "Overdose", "another": ["overdose", "オーバードーズ", "おーばーどーず", "オーバードース", "おーばーどーす"]},
+                {"answer": "ミックスナッツ", "another": ["みっすくなっつ"]},
+                {"answer": "アイラブユー", "another": ["あいらぶゆー"]},
+                {"answer": "ダンスホール", "another": ["だんすほーる"]},
+                {"answer": "シンデレラボーイ", "another": ["しんでれらぼーい"]},
+                {"answer": "Habit", "another": ["habit", "ハビット", "はびっと"]},
+                {"answer": "水平線", "another": ["すいへいせん"]},
+                {"answer": "祝福", "another": ["しゅくふく"]},
+                {"answer": "ドライフラワー", "another": ["ドライフラワー"]},
+                {"answer": "Ditto", "another": ["ditto", "ディト", "でぃと"]},
+                {"answer": "私は最強", "another": ["わたしはさいきょう", "わたしは最強"]},
+                {"answer": "Soranji", "another": ["soranji", "ソランジ", "そらんじ"]},
+                {"answer": "ペテルギウス", "another": ["ぺてるぎうす"]}
             ]
         };
     }
