@@ -86,12 +86,14 @@
         audioPlayer.addEventListener("ended", function () {
             // 読み上げが終了したときにBGMを再生
             audioPlayer.src = "./audio/gameBGM.mp3";
-            audioPlayer.loop = true; // ループ再生を有効にする
+            audioPlayer.addEventListener("ended", function() {
+                audioPlayer.src = "./audio/bomb.mp3";
+                audioPlayer.play();
+                setTimeout(function() {
+                    window.location.href = './select.html';
+                }, 4000); // 4秒後にセレクト画面へ移行
+            });
             audioPlayer.play();
-            // カウントダウン開始
-            setTimeout(function() {
-                window.location.href = './select.html';
-            }, 180000); // 3分後にセレクト画面へ移行
         });
     }
     
