@@ -99,6 +99,17 @@
         {"answer": "Ditto", "another": ["ditto", "ディト", "でぃと"]},
         {"answer": "私は最強", "another": ["わたしはさいきょう", "わたしは最強"]},
         {"answer": "Soranji", "another": ["soranji", "ソランジ", "そらんじ"]},
-        {"answer": "ペテルギウス", "another": ["ぺてるぎうす"]}
+        {"answer": "ペテルギウス", "another": ["ぺてるぎうす"]},
+
+        {"genre": "Sport", "inittext": "2028年開催地", "answer": "ロサンゼルス", "another": ["ろさんぜるす"]},
+        {"genre": "Sport", "inittext": "2024年開催地", "answer": "パリ", "another": ["ぱり"]},
+        {"genre": "Sport", "inittext": "2021年開催地", "answer": "東京", "another": ["とうきょう"]},
+        {"genre": "Sport", "inittext": "2016年開催地", "answer": "リオデジャネイロ", "another": ["りお", "リオ", "りおでじゃねいろ"]},
+        {"genre": "Sport", "inittext": "2012年開催地", "answer": "ロンドン", "another": ["ろんどん"]},
+        {"genre": "Sport", "inittext": "2008年開催地", "answer": "北京", "another": ["ペキン", "ぺきん"]},
+        {"genre": "Sport", "inittext": "2004年開催地", "answer": "アテネ", "another": ["あてね"]},
+        {"genre": "Sport", "inittext": "2000年開催地", "answer": "シドニー", "another": ["しどにー"]},
+        {"genre": "Sport", "inittext": "1996年開催地", "answer": "アトランタ", "another": ["あとらんた"]},
+        {"genre": "Sport", "inittext": "1992年開催地", "answer": "バルセロナ", "another": ["ばるせろな"]}
     ]
 }
