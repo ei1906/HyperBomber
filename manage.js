@@ -109,14 +109,24 @@
         var inputValue = document.getElementById("AnswerBox").value;
         document.getElementById("AnswerBox").value = "";
         inputValue = changeFromAnotherAnswer(inputValue); // 別解は正答に変更
-        console.log(inputValue);
         if(checkAnsList(inputValue) && checkAnswerBoard(inputValue)){
+            // 効果音を流す
+            var effect = document.getElementById("CorrectEffect");
+            effect.pause();
+            effect.currentTime = 0;
+            effect.play();
             // 該当のボードの画像と文字列を変更
             changeBoard(inputValue);
             answered ++;
             if(answered >= 10){
                 window.location.href = './result.html?res=clear';
             }
+        } else {
+            // 効果音を流す
+            var effect = document.getElementById("WrongEffect");
+            effect.pause();
+            effect.currentTime = 0;
+            effect.play();
         }
     }
 

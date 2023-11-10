@@ -92,3 +92,17 @@ body {
     top: 0;
     left: 0;
 }
+
+#CorrectEffect {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#WrongEffect {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
