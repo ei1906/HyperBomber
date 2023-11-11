@@ -1,3 +1,14 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* 白色の背景 */
+    opacity: 1; /* 初期状態では完全に不透明 */
+    transition: opacity 2s; /* フェードアウトの時間（2秒）を設定 */
+}
+
 #body {
     background-image: url(../image/labo.jpg);
     background-size: 1200px 800px;
