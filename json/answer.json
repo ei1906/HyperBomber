@@ -45,7 +45,7 @@
         {"genre": "English", "inittext": "After a storm comes a calm", "answer": "雨降って地固まる"},
         {"genre": "English", "inittext": "When in Rome, do as the Romans do", "answer": "郷に入っては郷に従え"},
         {"genre": "English", "inittext": "Out of the mouth comes evil", "answer": "口は災いの元"},
-        {"genre": "English", "inittext": "Practoce makes perfect", "answer": "習うより慣れろ"},
+        {"genre": "English", "inittext": "Practice makes perfect", "answer": "習うより慣れろ"},
         {"genre": "English", "inittext": "Example is better than percept", "answer": "論より証拠"},
 
         {"genre": "Univ", "inittext": "学部", "answer": "情報学部"},
@@ -53,7 +53,7 @@
         {"genre": "Univ", "inittext": "学部", "answer": "理学部"},
         {"genre": "Univ", "inittext": "学部", "answer": "教育学部"},
         {"genre": "Univ", "inittext": "学部", "answer": "農学部"},
-        {"genre": "Univ", "inittext": "学部", "answer": "人文社会学部"},
+        {"genre": "Univ", "inittext": "学部", "answer": "人文社会科学部"},
         {"genre": "Univ", "inittext": "学部", "answer": "グローバル共創科学部"},
         {"genre": "Univ", "inittext": "学環", "answer": "地域創造学環"},
         {"genre": "Univ", "inittext": "研究所", "answer": "電子工学研究所"},
