@@ -13,8 +13,6 @@
         overlay.style.opacity = 0; // フェードアウト
         setTimeout(function() {
             overlay.style.display = 'none';
-            // 問題文を読み、BGMとカウントダウンを開始する
-            setAudio();
         }, 2500);
     }
 
