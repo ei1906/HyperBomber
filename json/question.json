@@ -9,6 +9,10 @@
         {"question": "2020年のポケモン・オブ・ザ・イヤー（人気投票）でトップ10にランクインしたポケモン、全て答えよ", "genre": "Pokemon"},
         {"question": "2023年上半期の総合ソング・チャートでトップ20にランクインした曲、10曲答えよ", "genre": "Music"},
         {"question": "次の年のオリンピック開催地、全て答えよ", "genre": "Sport"},
+        {"question": "次の難読苗字、全て答えよ", "genre": "Ex1"},
+        {"question": "これらの芸人のコンビ名、全て答えよ", "genre": "Ex2"},
+        {"question": "次の年の流行語大賞、全て答えよ", "genre": "Ex3"},
+        {"question": "次の冒頭で始まる曲、全て答えよ", "genre": "Ex4"},
         {"question": "該当の問題は存在しません", "genre": "Unknown"}
     ]
 }

@@ -22,12 +22,12 @@
         // 徐々にフェードアウト
         var overlay = document.querySelector('.overlay');
         overlay.style.opacity = 0; // フェードアウト
-        setTimeout(function() {
+        setTimeout(function () {
             overlay.style.display = 'none';
             // 問題文を読み、BGMとカウントダウンを開始する
             setAudio();
         }, 1000);
-        
+
     }
 
     function getQuizGenre() {
@@ -50,8 +50,16 @@
             quiz_genre = "Comic";
         } else if (c == "Pok") {
             quiz_genre = "Pokemon";
-        } else if (c == "Spo"){
+        } else if (c == "Spo") {
             quiz_genre = "Sport";
+        } else if (c == "Ex1") {
+            quiz_genre = "Ex1";
+        } else if (c == "Ex2") {
+            quiz_genre = "Ex2";
+        } else if (c == "Ex3") {
+            quiz_genre = "Ex3";
+        } else if (c == "Ex4") {
+            quiz_genre = "Ex4";
         }
     }
 
@@ -241,6 +249,10 @@
                 { "question": "2020年のポケモン・オブ・ザ・イヤー（人気投票）で<br>トップ10にランクインしたポケモン、全て答えよ", "genre": "Pokemon" },
                 { "question": "2023年上半期の総合ソング・チャートで<br>トップ20にランクインした曲、10曲答えよ", "genre": "Music" },
                 { "question": "次の年のオリンピック開催地、全て答えよ", "genre": "Sport" },
+                { "question": "次の難読苗字、全て答えよ", "genre": "Ex1" },
+                { "question": "これらの芸人のコンビ名、全て答えよ", "genre": "Ex2" },
+                { "question": "次の年の流行語大賞、全て答えよ", "genre": "Ex3" },
+                { "question": "次の冒頭で始まる曲、全て答えよ", "genre": "Ex4" },
                 { "question": "該当の問題は存在しません", "genre": "Unknown" }
             ]
         };
@@ -357,7 +369,51 @@
                 { "genre": "Sport", "inittext": "2004年開催地", "answer": "アテネ" },
                 { "genre": "Sport", "inittext": "2000年開催地", "answer": "シドニー" },
                 { "genre": "Sport", "inittext": "1996年開催地", "answer": "アトランタ" },
-                { "genre": "Sport", "inittext": "1992年開催地", "answer": "バルセロナ" }
+                { "genre": "Sport", "inittext": "1992年開催地", "answer": "バルセロナ" },
+
+                { "genre": "Ex1", "inittext": "縣", "answer": "あがた" },
+                { "genre": "Ex1", "inittext": "左右都", "answer": "そうず" },
+                { "genre": "Ex1", "inittext": "小鳥遊", "answer": "たかなし" },
+                { "genre": "Ex1", "inittext": "躑躅森", "answer": "つつじもり" },
+                { "genre": "Ex1", "inittext": "嘉数", "answer": "かかず" },
+                { "genre": "Ex1", "inittext": "四月一日", "answer": "わたぬき" },
+                { "genre": "Ex1", "inittext": "凸守", "answer": "でこもり" },
+                { "genre": "Ex1", "inittext": "御手洗", "answer": "みたらい" },
+                { "genre": "Ex1", "inittext": "鏑木", "answer": "かぶらき" },
+                { "genre": "Ex1", "inittext": "桔梗", "answer": "ききょう" },
+
+                { "genre": "Ex2", "inittext": "設楽統/日村勇紀", "answer": "バナナマン" },
+                { "genre": "Ex2", "inittext": "伊達幹生/富澤岳史", "answer": "サンドウィッチマン" },
+                { "genre": "Ex2", "inittext": "道音雄太/布川大起", "answer": "トム・ブラウン" },
+                { "genre": "Ex2", "inittext": "若林正恭/春日俊彰", "answer": "オードリー" },
+                { "genre": "Ex2", "inittext": "松本人志/浜田雅功", "answer": "ダウンタウン" },
+                { "genre": "Ex2", "inittext": "有野晋哉/濱口優", "answer": "よゐこ" },
+                { "genre": "Ex2", "inittext": "長田庄平/松尾駿", "answer": "チョコレートプラネット" },
+                { "genre": "Ex2", "inittext": "岡崎光輝/吉岡廣憲", "answer": "博多華丸・大吉" },
+                { "genre": "Ex2", "inittext": "金子和令/安藤和代", "answer": "メイプル超合金" },
+                { "genre": "Ex2", "inittext": "石川晟也/佐々木直人", "answer": "霜降り明星" },
+
+                { "genre": "Ex3", "inittext": "2022年", "answer": "村神様" },
+                { "genre": "Ex3", "inittext": "2020年", "answer": "３密" },
+                { "genre": "Ex3", "inittext": "2019年", "answer": "ONE TEAM" },
+                { "genre": "Ex3", "inittext": "2018年", "answer": "そだねー" },
+                { "genre": "Ex3", "inittext": "2016年", "answer": "神ってる" },
+                { "genre": "Ex3", "inittext": "2012年", "answer": "ワイルドだろぉ" },
+                { "genre": "Ex3", "inittext": "2011年", "answer": "なでしこジャパン" },
+                { "genre": "Ex3", "inittext": "2010年", "answer": "ゲゲゲの～" },
+                { "genre": "Ex3", "inittext": "2009年", "answer": "政権交代" },
+                { "genre": "Ex3", "inittext": "2004年", "answer": "チョー気持ちいい" },
+
+                { "genre": "Ex4", "inittext": "君が代は 千代に八千代に", "answer": "君が代" },
+                { "genre": "Ex4", "inittext": "Yo!Say 夏が胸を刺激する", "answer": "HOT LIMIT" },
+                { "genre": "Ex4", "inittext": "明日、<br>今日よりも好きになれる", "answer": "キセキ" },
+                { "genre": "Ex4", "inittext": "あるひ もりのなか<br>くまさんに であった", "answer": "森のくまさん" },
+                { "genre": "Ex4", "inittext": "強くなれる理由を知った", "answer": "紅蓮華" },
+                { "genre": "Ex4", "inittext": "晴れたる青空<br>ただよう雲よ", "answer": "よろこびの歌" },
+                { "genre": "Ex4", "inittext": "沈むように<br>溶けてゆくように", "answer": "夜に駆ける" },
+                { "genre": "Ex4", "inittext": "君とのラブストーリー<br>それは予想通り", "answer": "Pretender" },
+                { "genre": "Ex4", "inittext": "大胆不敵にハイカラ革命", "answer": "千本桜" },
+                { "genre": "Ex4", "inittext": "八重浪寄する海よ浜よ<br>青く畳む山々", "answer": "浜松市歌" }
             ]
         };
         json_another = {
@@ -463,16 +519,60 @@
                 { "answer": "Soranji", "another": ["soranji", "ソランジ", "そらんじ"] },
                 { "answer": "ペテルギウス", "another": ["ぺてるぎうす"] },
 
-                { "genre": "Sport", "inittext": "2028年開催地", "answer": "ロサンゼルス", "another": ["ろさんぜるす"] },
-                { "genre": "Sport", "inittext": "2024年開催地", "answer": "パリ", "another": ["ぱり"] },
-                { "genre": "Sport", "inittext": "2021年開催地", "answer": "東京", "another": ["とうきょう"] },
-                { "genre": "Sport", "inittext": "2016年開催地", "answer": "リオデジャネイロ", "another": ["りお", "リオ", "りおでじゃねいろ"] },
-                { "genre": "Sport", "inittext": "2012年開催地", "answer": "ロンドン", "another": ["ろんどん"] },
-                { "genre": "Sport", "inittext": "2008年開催地", "answer": "北京", "another": ["ペキン", "ぺきん"] },
-                { "genre": "Sport", "inittext": "2004年開催地", "answer": "アテネ", "another": ["あてね"] },
-                { "genre": "Sport", "inittext": "2000年開催地", "answer": "シドニー", "another": ["しどにー"] },
-                { "genre": "Sport", "inittext": "1996年開催地", "answer": "アトランタ", "another": ["あとらんた"] },
-                { "genre": "Sport", "inittext": "1992年開催地", "answer": "バルセロナ", "another": ["ばるせろな"] }
+                { "answer": "ロサンゼルス", "another": ["ろさんぜるす"] },
+                { "answer": "パリ", "another": ["ぱり"] },
+                { "answer": "東京", "another": ["とうきょう"] },
+                { "answer": "リオデジャネイロ", "another": ["りお", "リオ", "りおでじゃねいろ"] },
+                { "answer": "ロンドン", "another": ["ろんどん"] },
+                { "answer": "北京", "another": ["ペキン", "ぺきん"] },
+                { "answer": "アテネ", "another": ["あてね"] },
+                { "answer": "シドニー", "another": ["しどにー"] },
+                { "answer": "アトランタ", "another": ["あとらんた"] },
+                { "answer": "バルセロナ", "another": ["ばるせろな"] },
+
+                { "answer": "あがた", "another": [] },
+                { "answer": "そうず", "another": ["そうづ", "さうず"] },
+                { "answer": "たかなし", "another": [] },
+                { "answer": "つつじもり", "another": [] },
+                { "answer": "かかず", "another": [] },
+                { "answer": "わたぬき", "another": [] },
+                { "answer": "でこもり", "another": [] },
+                { "answer": "みたらい", "another": [] },
+                { "answer": "かぶらき", "another": [] },
+                { "answer": "ききょう", "another": [] },
+
+                { "answer": "バナナマン", "another": ["ばななまん"] },
+                { "answer": "サンドウィッチマン", "another": ["さんどうぃっちまん"] },
+                { "answer": "トム・ブラウン", "another": ["とむぶらうん", "トムブラウン", "とむ・ぶらうん"] },
+                { "answer": "オードリー", "another": ["おーどりー"] },
+                { "answer": "ダウンタウン", "another": ["だうんたうん"] },
+                { "answer": "よゐこ", "another": ["よいこ"] },
+                { "answer": "チョコレートプラネット", "another": ["ちょこれーとぷらねっと"] },
+                { "answer": "博多華丸・大吉", "another": ["華丸大吉", "博多華丸大吉", "はなまるだいきち", "はかたはなまるだいきち", "はかたはなまる・だいきち"] },
+                { "answer": "メイプル超合金", "another": ["めいぷるちょうごうきん"] },
+                { "answer": "霜降り明星", "another": ["しもふりみょうじょう"] },
+
+                { "answer": "村神様", "another": ["むらかみさま"] },
+                { "answer": "３密", "another": ["三密", "3密", "さんみつ"] },
+                { "answer": "ONE TEAM", "another": ["ONETEAM", "ワンチーム", "わんちーむ"] },
+                { "answer": "そだねー", "another": [] },
+                { "answer": "神ってる", "another": ["かみってる"] },
+                { "answer": "ワイルドだろぉ", "another": ["ワイルドだろお", "わいるどだろぉ", "わいるどだろお"] },
+                { "answer": "なでしこジャパン", "another": ["なでしこじゃぱん"] },
+                { "answer": "ゲゲゲの～", "another": ["ゲゲゲの", "げげげの"] },
+                { "answer": "政権交代", "another": ["せいけんこうたい"] },
+                { "answer": "チョー気持ちいい", "another": ["ちょーきもちいい", "ちょうきもちいい"] },
+
+                { "answer": "君が代", "another": ["きみがよ", "国歌", "こっか"] },
+                { "answer": "HOT LIMIT", "another": ["HOTLIMIT", "hot limit", "hotlimit", "ホットリミット", "ほっとりみっと"] },
+                { "answer": "キセキ", "another": ["きせき"] },
+                { "answer": "森のくまさん", "another": ["もりのくまさん"] },
+                { "answer": "紅蓮華", "another": ["ぐれんげ"] },
+                { "answer": "よろこびの歌", "another": ["よろこびのうた"] },
+                { "answer": "夜に駆ける", "another": ["夜にかける", "よるにかける"] },
+                { "answer": "Pretender", "another": ["pretender", "プリテンダー", "ぷりてんだー"] },
+                { "answer": "千本桜", "another": ["せんぼんざくら"] },
+                { "answer": "浜松市歌", "another": ["市歌", "しか", "はままつしか"] }
             ]
         };
     }
