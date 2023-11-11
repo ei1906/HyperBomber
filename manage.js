@@ -19,8 +19,15 @@
         form.addEventListener("keypress", handleKeyPress);
         // クイズジャンルにしたがって問題文と選択肢をセット
         setElementText();
-        // 問題文を読み、BGMとカウントダウンを開始する
-        setAudio();
+        // 徐々にフェードアウト
+        var overlay = document.querySelector('.overlay');
+        overlay.style.opacity = 0; // フェードアウト
+        setTimeout(function() {
+            overlay.style.display = 'none';
+            // 問題文を読み、BGMとカウントダウンを開始する
+            setAudio();
+        }, 1000);
+        
     }
 
     function getQuizGenre() {
@@ -97,14 +104,18 @@
             // 読み上げが終了したときにBGMを再生
             audioPlayer.src = "./audio/gameBGM.mp3";
             audioPlayer.addEventListener("ended", function () {
+                var white = document.getElementById('white');
+                white.style.display = 'block';
+
                 audioPlayer.src = "./audio/bomb.mp3";
                 audioPlayer.play();
                 setTimeout(function () {
                     window.location.href = './result.html?res=fail';
-                }, 3000); // 4秒後にセレクト画面へ移行
+                }, 3000); // 3秒後にセレクト画面へ移行
             });
             audioPlayer.play();
         });
+        audioPlayer.play();
     }
 
     function getInputValue() {
@@ -312,7 +323,7 @@
                 { "genre": "Comic", "inittext": "チェンソーマン", "answer": "藤本タツキ" },
                 { "genre": "Comic", "inittext": "鋼の錬金術師", "answer": "荒川弘" },
                 { "genre": "Comic", "inittext": "名探偵コナン", "answer": "青山剛昌" },
-                { "genre": "Comic", "inittext": "やなせたかし", "answer": "アンパンマン" },
+                { "genre": "Comic", "inittext": "アンパンマン", "answer": "やなせたかし" },
                 { "genre": "Comic", "inittext": "ちびまる子ちゃん", "answer": "さくらももこ" },
                 { "genre": "Comic", "inittext": "サザエさん", "answer": "長谷川町子" },
 
